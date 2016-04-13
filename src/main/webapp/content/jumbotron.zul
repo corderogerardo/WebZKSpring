@@ -1,0 +1,9 @@
+<div class="jumbotron" xmlns:h="xhtml">
+	<div class="container">
+		<h:h1>Hello, world!</h:h1>
+		<h:p>Contents ...</h:p>
+		<h:p>
+			<a class="btn btn-primary btn-lg">Learn more</a>
+		</h:p>
+	</div>
+</div>

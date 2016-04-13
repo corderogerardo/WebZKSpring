@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd" >
+
+<hibernate-reverse-engineering>
+
+
+	<table-filter match-name="equipo" match-schema="public"></table-filter>
+	<table-filter match-name="jugador" match-schema="public"></table-filter>
+	<table-filter match-name="jugadortorneo" match-schema="public"></table-filter>
+	<table-filter match-name="mensaje" match-schema="public"></table-filter>
+	<table-filter match-name="mensajejugador" match-schema="public"></table-filter>
+	<table-filter match-name="partido" match-schema="public"></table-filter>
+	<table-filter match-name="persona" match-schema="public"></table-filter>
+	<table-filter match-name="prediccion" match-schema="public"></table-filter>
+	<table-filter match-name="resultado" match-schema="public"></table-filter>
+	<table-filter match-name="rol" match-schema="public"></table-filter>
+	<table-filter match-name="torneo" match-schema="public"></table-filter>
+	<table-filter match-name="usuario" match-schema="public"></table-filter>
+</hibernate-reverse-engineering>

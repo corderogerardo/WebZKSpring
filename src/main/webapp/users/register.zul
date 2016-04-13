@@ -1,0 +1,64 @@
+<div sclass="container">
+	<div sclass="row">
+		<div sclass="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+			<div sclass="form-horizontal" apply="controller.ControladorUsuario" 
+			id="registerWin">
+				<div sclass="form-group" xmlns:h="xhtml">
+					<h:h2 >Registrate</h:h2>
+				</div>
+				<div sclass="form-group">
+						<span sclass="sr-only">Cedula</span>
+						<textbox id="cedula" sclass="form-control"
+				constraint="no empty: Por favor escribe tu cedula"  placeholder="Cedula"
+				width="260px"/>
+				</div>
+				<div sclass="form-group">
+						<span sclass="sr-only">Nombre</span>
+						<textbox id="nombre" sclass="form-control" placeholder="Nombre"
+				constraint="no empty: Por favor escribe tu nombre" width="260px"/>
+				</div>
+				<div sclass="form-group">
+						<span sclass="sr-only">Apellido</span>
+						<textbox id="apellido" sclass="form-control"  placeholder="Apellido"
+				constraint="no empty: Por favor escribe tu apellido" 
+				width="260px"/>
+				</div>
+				<div sclass="form-group">
+						<span sclass="sr-only">Correo</span>
+						<textbox id="correo" sclass="form-control" placeholder="Correo"
+				constraint="/.+@.+\.[a-z]+/: Por favor escribe tu correo" 
+				width="260px"/>
+				</div>
+				<div sclass="form-group">
+						<span sclass="sr-only">Fecha Nacimiento</span>
+						<datebox id="fechanacimiento" placeholder="mm dd, yyyy" width="260px" height="50px" constraint="no future"/>
+				</div>
+				<div sclass="form-group">
+						<span sclass="sr-only">Contraseña</span>
+						<textbox id="clave" sclass="form-control"  placeholder="Contraseña"
+				constraint="no empty: Por favor escribe tu contraseña " 
+				type="password" width="260px"/>
+						
+				</div>
+				<div sclass="form-group">
+						<span sclass="sr-only">Repetir Contraseña</span>
+						<textbox id="confcontrasena" sclass="form-control"  placeholder="Confirmar Contraseña"
+						constraint="no empty: Por favor repite tu contraseña " 
+						type="password" width="260px"/>
+						
+				</div>
+				<div sclass="form-group">
+						<span sclass="sr-only">Foto</span>
+						<button id="urlfoto" upload="true" sclass="btn btn-info" label="Seleccionar Foto" width="260px"/>
+						
+				</div>
+				<div sclass="form-group">
+					<div sclass="col-sm-10 col-sm-offset-2">
+						<button id="saved" sclass="btn btn-primary" label="Registrar" onClick="@command('saved')"/>
+						</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</div>

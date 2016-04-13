@@ -1,0 +1,55 @@
+<div id="registrarTorneoWin" sclass="col-xs-12 col-sm-12 col-md-12 col-lg-12" xmlns:h="xhtml"
+apply="org.zkoss.bind.BindComposer"
+viewModel="@id('vm') @init('quinielasocial.lab.viewmodel.VMTorneo')" >
+		<h:legend>Torneo</h:legend>
+	
+		<div sclass="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+			<div sclass="form-group">
+				<h:label >Nombre del Torneo</h:label>
+				<textbox id="txtnombreTor" sclass="form-control" placeholder="Ingrese Nombre del Torneo" value="@bind(vm.nombretorneo)" 
+				constraint="no empty: El nombre del torneo no puede estar vacio" />
+			</div>
+			<div sclass="form-group">
+				<h:label >Descripcion del Torneo</h:label>
+				<textbox id="txtDesc" sclass="form-control" placeholder="Ingrese Descripcion del Torneo" cols="5" value="@bind(vm.descripciontorneo)" 
+				constraint="no empty: La descripcion del torneo no puede estar vacio" />
+			</div>
+		</div>
+		<div sclass="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+			<div sclass="form-group">
+				<h:label >Fecha de Inicio del Torneo</h:label>
+				<datebox id="dtfecIni" value="@bind(vm.fechainicio)" format="dd/MM/yyyy"/>
+			</div>
+			<div sclass="form-group">
+				<h:label >Fecha de Fin del Torneo</h:label>
+				<datebox id="dtfecFin" value="@bind(vm.fechafin)" format="dd/MM/yyyy" />
+			</div>
+			<div sclass="form-group">
+				<h:label for="">Prediccion hasta antes de cantidad de dias</h:label>
+				<decimalbox id="topePrediccion" sclass="form-control" placeholder="Ingrese dias" value="@bind(vm.topeprediccion)" 
+				constraint="no empty: Ingrese Horas" />
+			</div>
+			<div sclass="form-group">
+				<h:label >Puntos por prediccion equipo Local</h:label>
+				 <decimalbox id="puntoMarcadorLocal" sclass="form-control" placeholder="Ingrese puntos" value="@bind(vm.puntomarcadorlocal)" 
+			    constraint="no empty: Ingrese Puntos Por Partido Ganado" />		
+			</div>
+		</div>
+		<div sclass="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+			<div sclass="form-group">
+				<h:label >Logo del Torneo</h:label>
+				<button id="btnimagen" sclass="btn btn-info" label="Logo del Torneo" upload="true" />
+			</div>
+			<div sclass="form-group">
+				<h:label>Puntos por prediccion equipo Visitante</h:label>
+				  <decimalbox id="puntoMarcadorVisitante" sclass="form-control" placeholder="Ingrese puntos" value="@bind(vm.puntomarcadorvisitante)" 
+			    constraint="no empty: Ingrese Puntos Por Partido Ganado" />	
+			</div>
+		</div>
+		<div sclass="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<button id="btnguardarTorneo" sclass="btn btn-primary" 
+			label="Guardar Torneo" onClick="@command('guardartorneo')"/>
+		</div>
+	
+	
+</div><!-- Fin vista torneo -->

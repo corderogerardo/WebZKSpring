@@ -1,0 +1,16 @@
+<vlayout sclass="page-content" xmlns:n="native" spacing="0">
+  
+  <separator height="12px"/>
+   <hlayout spacing="24px">
+    <include src="content/jumbotron.zul" hflex="12"/>
+  </hlayout>
+  <hlayout spacing="24px">
+    <include src="content/howplay.zul" hflex="12"/>
+  </hlayout>
+  <separator bar="true"/>
+  <hlayout spacing="24px">
+  	<include hflex="2" />
+    <include src="users/login.zul" hflex="4" />
+     <include src="users/register.zul" hflex="4"/>
+  </hlayout>
+</vlayout>

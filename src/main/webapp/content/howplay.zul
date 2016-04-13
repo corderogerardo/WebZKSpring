@@ -1,0 +1,37 @@
+<div sclass="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+	<div sclass="col-xs-12 col-sm-12 col-md-12 col-lg-12 comojugar">
+	
+	<span>¿Como Jugar?</span>	
+
+	</div> 	
+	<div sclass="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+		
+		<div sclass="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+		<span sclass="glyphicon glyphicon-user"></span>
+		
+		Registrate
+		</div>  
+        <div >Ingresa tus datos en el formulario de registro, una vez completado recibiras información sobre resultados, nuevas quinielas.</div>
+	</div> 	
+	
+	<div sclass="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+		
+		<div sclass="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+		<span sclass="glyphicon glyphicon-calendar"></span>
+		Crea Tu Quiniela
+		</div> 	
+		<div sclass="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+		Elige el deporte de tu preferencia, ponle título a tu quiniela, agrega equipos,partidos y toda la información referente a la competición.
+		</div> 	
+		
+	</div>
+	<div sclass="col-xs-4 col-sm-4 col-md-4 col-lg-4">	
+		<div sclass="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+		<span sclass="glyphicon glyphicon-share"></span>
+		Comparte
+		</div> 	
+		<div sclass="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+		Invita a tus amigos a participar en la quiniela y compite ¡Demuestra quien es el mejor!.
+		</div> 	
+	</div>
+</div>

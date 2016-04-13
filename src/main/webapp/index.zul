@@ -1,0 +1,28 @@
+<?page title="Quiniela Social - Juega, Diviertete y Comparte."?>
+<!-- Load Bootstrap  -->
+<?link href="bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css"?>
+
+<!-- Google Open Sans font -->
+<!-- Load fonts from local -->
+<?link href="css/fonts.css" rel="stylesheet" type="text/css"?>
+
+<!-- Unmark if we want to use fonts from google server
+<?link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400' rel='stylesheet' type='text/css'?>
+-->
+
+<?link href="less/index.css.dsp" rel="stylesheet" type="text/css"?>
+<?link href="stylus/index.css" rel="stylesheet" type="text/css"?>
+
+<zk xmlns:n="native">
+	<include src="navbar.zul"/>             
+	<hlayout id="main" spacing="0">
+		  
+		<vlayout spacing="0" hflex="1">
+			<include src="page.zul"/>
+		</vlayout>
+	</hlayout>
+	<include src="content/info.zul"/>
+	<include src="content/footer.zul"/>
+	
+	
+</zk>
