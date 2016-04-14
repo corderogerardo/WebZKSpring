@@ -1,0 +1,27 @@
+<div sclass="navbar navbar-default" xmlns:h="xhtml">
+	<div sclass="container-fluid">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div sclass="navbar-header">
+			<h:button type="button" sclass="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+				<span sclass="sr-only">Toggle navigation</span>
+				<span sclass="icon-bar"></span>
+				<span sclass="icon-bar"></span>
+				<span sclass="icon-bar"></span>
+			</h:button>
+			<a sclass="navbar-brand" href="#">Name Project</a>
+		</div>
+
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div sclass="collapse navbar-collapse navbar-ex1-collapse">
+			<h:ul sclass="nav navbar-nav">
+				<h:li sclass="active"><a href="/">Home</a></h:li>
+				<h:li><a href="#">About us</a></h:li>
+				<h:li><a href="#">Contact</a></h:li>
+			</h:ul>
+			
+			<h:ul sclass="nav navbar-nav navbar-right">
+				<h:li><a href="#" target="_blank">Link</a></h:li>
+			</h:ul>
+		</div><!-- /.navbar-collapse -->
+	</div>
+</div>
