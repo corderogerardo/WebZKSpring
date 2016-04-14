@@ -4,57 +4,57 @@
 			<div sclass="form-horizontal" apply="controller.ControladorUsuario" 
 			id="registerWin">
 				<div sclass="form-group" xmlns:h="xhtml">
-					<h:h2 >Registrate</h:h2>
+					<h:h2 >Sign up</h:h2>
 				</div>
 				<div sclass="form-group">
-						<span sclass="sr-only">Cedula</span>
+						<span sclass="sr-only">Identity Number</span>
 						<textbox id="cedula" sclass="form-control"
-				constraint="no empty: Por favor escribe tu cedula"  placeholder="Cedula"
+				constraint="no empty: Message"  placeholder="ID"
 				width="260px"/>
 				</div>
 				<div sclass="form-group">
-						<span sclass="sr-only">Nombre</span>
-						<textbox id="nombre" sclass="form-control" placeholder="Nombre"
-				constraint="no empty: Por favor escribe tu nombre" width="260px"/>
+						<span sclass="sr-only">First Name</span>
+						<textbox id="nombre" sclass="form-control" placeholder="FirstName"
+				constraint="no empty: Message" width="260px"/>
 				</div>
 				<div sclass="form-group">
-						<span sclass="sr-only">Apellido</span>
-						<textbox id="apellido" sclass="form-control"  placeholder="Apellido"
-				constraint="no empty: Por favor escribe tu apellido" 
+						<span sclass="sr-only">Last Name</span>
+						<textbox id="apellido" sclass="form-control"  placeholder="LastName"
+				constraint="no empty: Message" 
 				width="260px"/>
 				</div>
 				<div sclass="form-group">
-						<span sclass="sr-only">Correo</span>
-						<textbox id="correo" sclass="form-control" placeholder="Correo"
-				constraint="/.+@.+\.[a-z]+/: Por favor escribe tu correo" 
+						<span sclass="sr-only">Email</span>
+						<textbox id="correo" sclass="form-control" placeholder="Email"
+				constraint="/.+@.+\.[a-z]+/: Message" 
 				width="260px"/>
 				</div>
 				<div sclass="form-group">
-						<span sclass="sr-only">Fecha Nacimiento</span>
+						<span sclass="sr-only">Birth Date</span>
 						<datebox id="fechanacimiento" placeholder="mm dd, yyyy" width="260px" height="50px" constraint="no future"/>
 				</div>
 				<div sclass="form-group">
-						<span sclass="sr-only">Contraseña</span>
-						<textbox id="clave" sclass="form-control"  placeholder="Contraseña"
-				constraint="no empty: Por favor escribe tu contraseña " 
+						<span sclass="sr-only">Pass</span>
+						<textbox id="clave" sclass="form-control"  placeholder="pass"
+				constraint="no empty: message " 
 				type="password" width="260px"/>
 						
 				</div>
 				<div sclass="form-group">
-						<span sclass="sr-only">Repetir Contraseña</span>
-						<textbox id="confcontrasena" sclass="form-control"  placeholder="Confirmar Contraseña"
-						constraint="no empty: Por favor repite tu contraseña " 
+						<span sclass="sr-only">Pass-confirmation</span>
+						<textbox id="confcontrasena" sclass="form-control"  placeholder="Password Confirmation"
+						constraint="no empty: message " 
 						type="password" width="260px"/>
 						
 				</div>
 				<div sclass="form-group">
 						<span sclass="sr-only">Foto</span>
-						<button id="urlfoto" upload="true" sclass="btn btn-info" label="Seleccionar Foto" width="260px"/>
+						<button id="urlfoto" upload="true" sclass="btn btn-info" label="Upload Picture" width="260px"/>
 						
 				</div>
 				<div sclass="form-group">
 					<div sclass="col-sm-10 col-sm-offset-2">
-						<button id="saved" sclass="btn btn-primary" label="Registrar" onClick="@command('saved')"/>
+						<button id="saved" sclass="btn btn-primary" label="Sign up" onClick="@command('saved')"/>
 						</div>
 				</div>
 			</div>

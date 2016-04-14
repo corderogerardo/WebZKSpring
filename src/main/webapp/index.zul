@@ -14,7 +14,8 @@
 <?link href="stylus/index.css" rel="stylesheet" type="text/css"?>
 
 <zk xmlns:n="native">
-	<include src="navbar.zul"/>             
+	<include src="navbar.zul"/>  
+	<include src="content/jumbotron.zul"/>           
 	<hlayout id="main" spacing="0">
 		  
 		<vlayout spacing="0" hflex="1">
@@ -23,6 +24,4 @@
 	</hlayout>
 	<include src="content/info.zul"/>
 	<include src="content/footer.zul"/>
-	
-	
 </zk>

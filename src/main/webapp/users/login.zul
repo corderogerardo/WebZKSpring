@@ -5,25 +5,25 @@
 			<div sclass="form-horizontal" apply="controller.ControladorUsuario" 
 			id="loginWin">
 					<div sclass="form-group" xmlns:h="xhtml">
-						<h:h2 >Iniciar Sesion</h:h2>
+						<h:h2 >Login</h:h2>
 					</div>
 
 					<div sclass="form-group">
-						<span sclass="sr-only">Usuario</span>
+						<span sclass="sr-only">Username</span>
 						<textbox id="usuario" width="260px" 
 						sclass="form-control" placeholder="Usuario" 
 						constraint="no empty /.+@.+\.[a-z]+/: Por favor escribe tu correo"
 						/>
 					</div>
 					<div class="form-group">
-						<span sclass="sr-only"> Contraseña</span>
+						<span sclass="sr-only"> Password</span>
 						<textbox id="password" type="password" sclass="form-control" placeholder="Contraseña"
 									width="260px" constraint="no empty: Por favor escribe tu Contraseña" 
 									/>
 					</div>
 				<div sclass="form-group">
 						<div sclass="col-sm-10 col-sm-offset-2">
-							<button  id="login"  sclass="btn btn-primary" label="Entrar" onClick="@command('login')" />
+							<button  id="login"  sclass="btn btn-primary" label="Sign in" onClick="@command('login')" />
 						</div>
 					</div>
 			</div>
