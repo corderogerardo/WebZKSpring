@@ -18,14 +18,36 @@
 		<property name="location" value="classpath:jdbc.properties" />
 	</bean>
 <!-- ====================================================== -->
-	<!-- LOCAL -->
+	
 	<!-- ====================================================== -->
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
 		<property name="driverClassName" value="${jdbc.driverClassName}" />
+		<!-- LOCAL -   -->
+<!-- 	UnComment for local use -->
 		<property name="url" value="${jdbc.url}" />
 		<property name="username" value="${jdbc.username}" />
 		<property name="password" value="${jdbc.password}" />
+<!-- 	UnComment for local use -->
+		
+<!-- 	HEROKU -->
+<!--It works with the BEAN that is just right down this / Funciona junto con el BEAN que sigue despues de esta seccion. -->
+
+<!-- 	UnComment for REMOTE use -->
+<!-- 		<property name="url" value="#{ 'jdbc:postgresql://' + @dbUrl.getHost() + ':' + @dbUrl.getPort() + @dbUrl.getPath() }"/> -->
+<!--         <property name="username" value="#{ @dbUrl.getUserInfo().split(':')[0] }"/> -->
+<!--         <property name="password" value="#{ @dbUrl.getUserInfo().split(':')[1] }"/> -->
+<!-- 	UnComment for REMOTE use -->
+
 	</bean>
+
+
+<!-- IMPORTANT BEAN FOR HEROKU / BEAN IMPORTANTE PARA HEROKU -->
+<!-- 	UnComment for REMOTE use -->
+<!-- 	<bean class="java.net.URI" id="dbUrl"> -->
+<!--       <constructor-arg value="${DATABASE_URL}"/> -->
+<!--     </bean> -->
+<!-- 	UnComment for REMOTE use -->
+	
 	
 	
 

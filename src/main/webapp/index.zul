@@ -11,10 +11,9 @@
 -->
 
 <?link href="less/index.css.dsp" rel="stylesheet" type="text/css"?>
-<?link href="stylus/index.css" rel="stylesheet" type="text/css"?>
 
 <zk xmlns:n="native">
-	<include src="navbar.zul"/>  
+	<include src="content/navbar.zul"/>  
 	<include src="content/jumbotron.zul"/>           
 	<hlayout id="main" spacing="0">
 		  

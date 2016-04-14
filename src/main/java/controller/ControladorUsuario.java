@@ -37,14 +37,8 @@ public class ControladorUsuario extends SelectorComposer<Component> {
 	private static final long serialVersionUID = 1L;
 	
 	@WireVariable
-	protected CRUDService serviciopersona = (CRUDService) SpringUtil.getBean("CRUDService");
-	@WireVariable
-	protected CRUDService serviciojugador = (CRUDService) SpringUtil.getBean("CRUDService");
-	@WireVariable
-	protected CRUDService serviciousuario = (CRUDService) SpringUtil.getBean("CRUDService");
-	@WireVariable
-	protected CRUDService serviciorol = (CRUDService) SpringUtil.getBean("CRUDService");
-	
+	protected CRUDService service = (CRUDService) SpringUtil.getBean("CRUDService");
+
 	private List<Persona> personas;
 	private List<Jugador> jugadores;
 	private List<Usuario> usuarios;
@@ -83,9 +77,9 @@ public class ControladorUsuario extends SelectorComposer<Component> {
 			super();
 			try{
 			//Buscamos y llenamos nuestras listas con la data en nuestras tablas en la base de datos.
-			personas = serviciopersona.getAll(Persona.class);
-			usuarios = serviciousuario.getAll(Usuario.class);
-			jugadores = serviciojugador.getAll(Jugador.class);
+			personas = service.getAll(Persona.class);
+			usuarios = service.getAll(Usuario.class);
+			jugadores = service.getAll(Jugador.class);
 
 			}catch(Exception e){
 				e.printStackTrace();
@@ -119,16 +113,19 @@ public class ControladorUsuario extends SelectorComposer<Component> {
 						miSession.setAttribute("idUser", usuarios.get(i).getUsuarioId());	
 						System.out.println(usuarios.get(i).getUsuarioId());
 						//Paso 4 si es valido redireccionar
-						Executions.sendRedirect("/administradorPagina/indexSesionAdmin.zul");					
+						//if it is admin user redirect to dashboard or admin panel
+						Messagebox.show("You have Sign in - logged as admin / Has iniciado sesion correctamente como administrador");
+						Executions.sendRedirect("/index.zul");					
 						s=true;
 					}
-					else
+					else //else if it is a player user redirect to dashboard for player
 					if (txtPass.equals(usuarios.get(i).getContrasena()) && usuarios.get(i).getIdrol() == 2){ //si es admin
 	
 						miSession.setAttribute("usuario", usuarios.get(i));				
 						miSession.setAttribute("idUser", usuarios.get(i).getUsuarioId());	
 						System.out.println(usuarios.get(i).getUsuarioId());
-						Executions.sendRedirect("/indexSesion.zul");		
+						Messagebox.show("You have Sign in - logged as player / Has iniciado sesion correctamente como jugador");
+						Executions.sendRedirect("/index.zul");		
 						s=true;
 					}
 						
@@ -142,7 +139,7 @@ public class ControladorUsuario extends SelectorComposer<Component> {
 		
 		@Listen("onClick=#saved; onOK=#registrarWin")
 		public void saved(){
-			//Registrar
+			//Registrar; Register
 			String txtCedula = cedula.getValue().toString();
 			String txtNombre= nombre.getValue().toString();
 			String txtApellido = apellido.getValue().toString();
@@ -173,11 +170,12 @@ public class ControladorUsuario extends SelectorComposer<Component> {
 			if(txtClave.equals(txtConfcontrasena) ){
 				//Paso 3 si todo el formulario esta completo guardar
 				Persona personac = new Persona(txtCedula, (long)personas.size()+1, txtNombre, txtApellido,txtFechanacimiento, txtUrlfoto, true, txtCorreo);
-				serviciopersona.Save(personac);
+				service.Save(personac);
 				Usuario usuarioc = new Usuario((long)usuarios.size()+1, txtClave, new Date(), true, 2, txtCorreo);
-				serviciousuario.Save(usuarioc);
+				service.Save(usuarioc);
 				Jugador jugadorc = new Jugador((long)jugadores.size()+1, (float)0, new Date(), txtCedula);
-				serviciojugador.Save(jugadorc);	
+				service.Save(jugadorc);	
+				Messagebox.show("You have successful sign up / Te has registrado correctamente");
 			}else{
 				 Messagebox.show("Contreñas no son iguales, por favor verifique.", "Error", Messagebox.OK, Messagebox.ERROR);
 			}

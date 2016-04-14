@@ -1,3 +1,4 @@
+<div sclass="container">
 <div sclass="col-xs-12 col-sm-12 col-md-12 col-lg-12" xmlns:h="xhtml">
 	<div sclass="col-xs-4 col-sm-4 col-md-4 col-lg-4">
 		
@@ -37,5 +38,6 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 		<h:center><span sclass="glyphicon glyphicon-share">Twitter API Implementation</span></h:center>
 		</div> 	
 	</div>
-	</h:br>
+	
+</div>
 </div>

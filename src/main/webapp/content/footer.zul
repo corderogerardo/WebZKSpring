@@ -1,3 +1,5 @@
-<div sclass="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-	<span>Start Point Maven ZK SpringMVC Hibernate Projects.</span>
+<div sclass="container" xmlns:h="xhtml">
+	<div sclass="col-xs-12 col-sm-12 col-md-12 col-lg-12 footer">
+		<h:center><a href="http://www.corderogerardo.me" target="_blank">Created by: Gerardo Cordero - </a><span>Start Point Maven ZK SpringMVC Hibernate Projects.</span></h:center>
+	</div>
 </div>
