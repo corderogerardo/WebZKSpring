@@ -38,6 +38,5 @@
 
 	<bean
 		class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor" />
-<!--     Aqui enlazas servicios -->
 	<bean id="CRUDService" class="business.service.CRUDServiceImpl" />
 </beans>
