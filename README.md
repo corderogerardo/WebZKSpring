@@ -26,17 +26,19 @@
 - You need to search for the option "Existing Maven Project", click next, to go to the next window where you will browse this project, once you find the this folder, select it and inmediatly it will show you the POM.xml file, A POM file the file that Maven use for projects configurations, add dependencies, plugins.
     - You can check this file, the part I would like you notice is where is the Heroku Plugin. 
 
+
 ## Heroku Installation
-    - Go to heroku.com, create an account, login.
-    - Install Heroku Toolbelt, go to your CMD/BASH console: type the command "heroku login", for login with the account you create.
-    - Go back to the Heroku website, Create new App.
-    - In your new app go settings, go to the section "Buildpacks", click the button "add buildpacks", paste the following buildpack, https://codon-buildpacks.s3.amazonaws.com/buildpacks/heroku/jvm-common.tgz.
-    - You need to add the PostgreSQL Addons, open the Heroku PostgreSQL, and search the host, the database name, the username and password, Open pgAdmin the add the HerokuPostgreSQL server to your pgAdmin, search the database and restore the database, this is the same process you did in your local PostgreSQL in pgAdmin.
-    - In the same settings page, go to the Info sections and search for "Git URL" option, copy that Git URL of your project.
-    - Go to your cmd/bash console, as we already are in this folder when we clone this repository en move into the folder. 
-    - You need now:
-        - start a git project with the command: "git init"
-        - now you need to add the Heroku Git URL with the following command: "git remote add heroku urlgit"
+
+- Go to heroku.com, create an account, login.
+- Install Heroku Toolbelt, go to your CMD/BASH console: type the command "heroku login", for login with the account you create.
+- Go back to the Heroku website, Create new App.
+- In your new app go settings, go to the section "Buildpacks", click the button "add buildpacks", paste the following buildpack, https://codon-buildpacks.s3.amazonaws.com/buildpacks/heroku/jvm-common.tgz.
+- You need to add the PostgreSQL Addons, open the Heroku PostgreSQL, and search the host, the database name, the username and password, Open pgAdmin the add the HerokuPostgreSQL server to your pgAdmin, search the database and restore the database, this is the same process you did in your local PostgreSQL in pgAdmin.
+- In the same settings page, go to the Info sections and search for "Git URL" option, copy that Git URL of your project.
+- Go to your cmd/bash console, as we already are in this folder when we clone this repository en move into the folder. 
+- You need now:
+	- start a git project with the command: "git init"
+	- now you need to add the Heroku Git URL with the following command: "git remote add heroku urlgit"
 
 ## Folder Structure.
 You need to understand how this project is structured
@@ -59,16 +61,18 @@ You need to understand how this project is structured
         - test
 
 ## Development Stage / Deployment to Heroku.
-    At this point you already need to have installed and configured:
-        - Restore the db.backup file to the PostgreSQL server instance.
-        - Must have configured in the Build Path and added the "resource" folder in the "source" Option Tab.
-        - Go to the Resource Folder in your EclipseJEE IDE, there are 4 .xml files in the resource folder.
-            - applicationContext_hib.xml: here is the sessionFactory bean, where you tell Hibernate what package to scan and look for the entities with the annotations, and some HibernateProperties that are useful.
-            - jdbc.properties: Here you have the jdbc configurations to conect to your local PostgreSQL, here you will need to change the database name, the username, the password if you set a password to PostgreSQL.
-            - springOrmContext.xml: springORM, Look in the DAO for the @Repository annotation and Service @Transaccional annotation.
-        Here is the important file that divide LOCAL FROM REMOTE, Development / Deployment.
-        ###     1. Local / Development - 2. Remote / Deployment
-            - applicationContext.xml: Here are sections 
+
+At this point you already need to have installed and configured:
+
+- Restore the db.backup file to the PostgreSQL server instance.
+- Must have configured in the Build Path and added the "resource" folder in the "source" Option Tab.
+- Go to the Resource Folder in your EclipseJEE IDE, there are 4 .xml files in the resource folder.
+	- applicationContext_hib.xml: here is the sessionFactory bean, where you tell Hibernate what package to scan and look for the entities with the annotations, and some HibernateProperties that are useful.
+	- jdbc.properties: Here you have the jdbc configurations to conect to your local PostgreSQL, here you will need to change the database name, the username, the password if you set a password to PostgreSQL.
+	- springOrmContext.xml: springORM, Look in the DAO for the @Repository annotation and Service @Transaccional annotation.
+	- Here is the important file that divide LOCAL FROM REMOTE, Development / Deployment.
+	- ###     1. Local / Development - 2. Remote / Deployment
+	- - applicationContext.xml:
 ```
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
