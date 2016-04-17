@@ -1,4 +1,4 @@
-# StartPointJavaEE
+# WebZKSpring
 - Is a preconfigure project to start coding ZK + Spring MVC + Hibernate and Postgress Projects.
 - It use Maven as dependecy manager.
 - Have Eclipse JavaEE IDE.
